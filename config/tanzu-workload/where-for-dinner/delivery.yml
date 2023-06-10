@@ -54,7 +54,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080"
-        image: kapte.azurecr.io/tap-packages/where-for-dinner-tanzu-workload@sha256:60cc4608b4140e84f101c98eb4fa5f0e2be1a754c68fa1cd4940e0a003737463
+        image: kapte.azurecr.io/tap-packages/where-for-dinner-tanzu-workload@sha256:3545aaa285b157a2eed380e1e031a7409235309a24e17ccf28cf80ccb8080a47
         livenessProbe:
           httpGet:
             path: /livez
