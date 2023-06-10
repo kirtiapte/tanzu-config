@@ -63,7 +63,7 @@ spec:
           value: crawler,rabbitmq
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080"
-        image: kapte.azurecr.io/tap-packages/where-for-dinner-search-proc-tanzu-workload@sha256:943d730b090a23cadb2031cc9233134eb44247731efda1aea85d2bc087e93108
+        image: kapte.azurecr.io/tap-packages/where-for-dinner-search-proc-tanzu-workload@sha256:1ac2b0e59a3f54777c2a5126900f02500249d262965ba59dbc145da5927e7a82
         livenessProbe:
           httpGet:
             path: /livez
