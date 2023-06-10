@@ -38,7 +38,7 @@ spec:
         carto.run/workload-name: where-for-dinner-crawler
     spec:
       containers:
-      - image: kapte.azurecr.io/tap-packages/where-for-dinner-crawler-tanzu-workload@sha256:78cc12f2b2fef507e497b684d0fe1c708b7ece2d26292ed675a67e2d0918dfe2
+      - image: kapte.azurecr.io/tap-packages/where-for-dinner-crawler-tanzu-workload@sha256:0307074e749f0e1254e36e4c2d14ac80f36e6eb163064374195cd949554a26d7
         name: workload
         resources:
           limits:
