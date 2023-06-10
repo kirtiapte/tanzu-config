@@ -37,7 +37,7 @@ spec:
       - env:
         - name: REACT_APP_PROFILE
           value: nonsecure
-        image: kapte.azurecr.io/tap-packages/where-for-dinner-ui-tanzu-workload@sha256:793639c16d16b50e687c0aa7f96cc690a3b3a3caf6a84b17aac1ca76ff729a0c
+        image: kapte.azurecr.io/tap-packages/where-for-dinner-ui-tanzu-workload@sha256:fa261ca82e8b06c4b31ae51426fd399486ac3422abf54b026f47714b79b135f9
         name: workload
         resources:
           limits:
