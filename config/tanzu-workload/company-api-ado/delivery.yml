@@ -30,7 +30,7 @@ spec:
         carto.run/workload-name: company-api-ado
     spec:
       containers:
-      - image: kapte.azurecr.io/tap-packages/company-api-ado-tanzu-workload@sha256:73880450f2ba6fa111a4313c4274084eea229b626212405859fb389e8a7a945f
+      - image: kapte.azurecr.io/tap-packages/company-api-ado-tanzu-workload@sha256:40338f3a795c7fe41b006ded9a511b1a2e314fea04cfe0f670f9b859c51e463b
         name: workload
         resources: {}
         securityContext:
