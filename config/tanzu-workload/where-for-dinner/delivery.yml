@@ -17,6 +17,7 @@ spec:
   template:
     metadata:
       annotations:
+        apps.tanzu.vmware.com/correlationid: https://github.com/kirtiapte/where-for-dinner-2?sub_path=where-for-dinner-api-gateway
         autoscaling.knative.dev/maxScale: "4"
         autoscaling.knative.dev/minScale: "1"
         autoscaling.knative.dev/target: "200"
@@ -78,5 +79,10 @@ spec:
             memory: 500M
         securityContext:
           runAsUser: 1000
+        startupProbe:
+          httpGet:
+            path: /readyz
+            port: 8080
+            scheme: HTTP
       serviceAccountName: default
 
