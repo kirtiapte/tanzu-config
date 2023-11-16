@@ -18,6 +18,7 @@ spec:
   template:
     metadata:
       annotations:
+        apps.tanzu.vmware.com/correlationid: https://github.com/kirtiapte/where-for-dinner-2?sub_path=where-for-dinner-notify
         autoscaling.knative.dev/maxScale: "4"
         autoscaling.knative.dev/minScale: "1"
         autoscaling.knative.dev/target: "200"
@@ -63,7 +64,7 @@ spec:
           value: rabbitmq
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080"
-        image: kapte.azurecr.io/tap-packages/where-for-dinner-notify-tanzu-workload@sha256:79084e7ea2efe414021c211e1dc45d7ca6a91243e3f79fabf4164d6e414396b7
+        image: kapte.azurecr.io/tap-packages/where-for-dinner-notify-tanzu-workload@sha256:826f182fe69ad6274d94c8d5b2a84f55404665cb2c779b4410f87a85c67b3ea1
         livenessProbe:
           httpGet:
             path: /livez
@@ -87,5 +88,10 @@ spec:
             memory: 500M
         securityContext:
           runAsUser: 1000
+        startupProbe:
+          httpGet:
+            path: /readyz
+            port: 8080
+            scheme: HTTP
       serviceAccountName: default
 
